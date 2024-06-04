@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "ecawo_backend": {
+      "main": "src/ecawo_backend/main.mo",
+      "type": "motoko"
+    },
+    "ecawo_frontend": {
+      "dependencies": [
+        "ecawo_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/ecawo_frontend/src/index.html"
+      },
+      "source": [
+        "src/ecawo_frontend/assets",
+        "dist/ecawo_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
